@@ -41,7 +41,9 @@ You should then be able to view all your project notes here: http://127.0.0.1:80
 
 ## Pushing an Occurrence to Grafeas
 
-An occurence is an instance of a Note - describing project specific details of a note *e.g.* an occurrence of a note about build details would describe the container images that resulted from a build
+An occurence is an instance of a Note - describing how and when a given note occurs on the resource associated with the occurrence.
+
+*e.g.* an occurrence of a note about build details would describe the container images that resulted from a build
 
 Occurrence names should follow the format `/projects/<project_id>/occurrences/<occurrence_id>`
 
@@ -53,6 +55,6 @@ You can post occurences to grafeas using a standard post curl
 
 ```
 curl -X POST \
-  'http://127.0.0.1:8080/v1alpha1/projects/image-signing/occurrences' \
+  'http://127.0.0.1:8080/v1beta1/projects/image-signing/occurrences' \
   -d @occurrence.json
 ```

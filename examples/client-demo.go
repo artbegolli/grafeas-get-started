@@ -5,24 +5,31 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/artbegolli/grafeas"
+	"github.com/ocibuilder/gofeas"
 )
 
-var configuration = &grafeas.Configuration{
+var configuration = &gofeas.Configuration{
 	BasePath:   "http://localhost:8080",
 	HTTPClient: &http.Client{},
 }
 
-var occurrence = grafeas.V1beta1Occurrence{
-	Resource: &grafeas.V1beta1Resource{
+var occurrence = gofeas.V1beta1Occurrence{
+	Resource: &gofeas.V1beta1Resource{
 		Uri: "http://dockerhub.io/myimage:0.1.0",
 	},
-	NoteName: "production",
+	NoteName: "projects/image-signing/notes/production",
+	Attestation: &gofeas.V1beta1attestationDetails{
+		Attestation: &gofeas.AttestationAttestation{
+			PgpSignedAttestation: &gofeas.AttestationPgpSignedAttestation{
+				Signature: "this-is-the-signature",
+				PgpKeyId:  "key-id",
+			},
+		}},
 }
 
 func main() {
 
-	cli := grafeas.NewAPIClient(configuration)
+	cli := gofeas.NewAPIClient(configuration)
 	res, httpRes, err := cli.GrafeasV1Beta1Api.CreateOccurrence(context.Background(), "projects/image-signing", occurrence)
 
 	if httpRes.StatusCode != http.StatusOK {

@@ -1,0 +1,11 @@
+{
+  "resourceUrl": "resource-url",
+  "noteName": "projects/image-signing/notes/production",
+  "attestation": {
+    "pgpSignedAttestation": {
+      "signature": "sig",
+      "contentType": "application/vnd.gcr.image.url.v1",
+      "pgpKeyId": "key"
+    }
+  }
+}

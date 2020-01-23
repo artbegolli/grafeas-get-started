@@ -58,3 +58,9 @@ curl -X POST \
   'http://127.0.0.1:8080/v1beta1/projects/image-signing/occurrences' \
   -d @resources/occurrence.json
 ```
+
+### Pushing an Occurrence using the [Grafeas Client API](https://github.com/grafeas/client-go/tree/master/0.1.0)
+
+You can push images to Grafeas from go using the Grafeas Go client API.
+
+An easy to import version of the client is available at <github.com/artbegolli/grafeas>.

@@ -34,7 +34,7 @@ You can post a note to grafeus using a standard post curl
 ```
 curl -X POST \
   'http://127.0.0.1:8080/v1beta1/projects/image-signing/notes?noteId=production' \
-  -d @./notes/note.json
+  -d @./resources/note.json
 ```
 
 You should then be able to view all your project notes here: http://127.0.0.1:8080/v1beta1/projects/image-signing/notes
@@ -56,5 +56,5 @@ You can post occurences to grafeas using a standard post curl
 ```
 curl -X POST \
   'http://127.0.0.1:8080/v1beta1/projects/image-signing/occurrences' \
-  -d @occurrence.json
+  -d @resources/occurrence.json
 ```

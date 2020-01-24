@@ -63,8 +63,11 @@ curl -X POST \
 
 You can push images to Grafeas from go using the Grafeas Go client API.
 
-An easy to import version of the client which isn't broken is available at <github.com/ocibuilder/gofeas>.
+An easy to import version of the client which isn't broken is available at github.com/ocibuilder/gofeas.
 
 ```
 go get github.com/ocibuilder/gofeas
 ```
+
+An example of pushing an occurrence using the client can be found in the [examples](https://github.com/artbegolli/grafeas-get-started/tree/master/examples)
+

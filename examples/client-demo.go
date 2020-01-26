@@ -30,7 +30,7 @@ var occurrence = gofeas.V1beta1Occurrence{
 func main() {
 
 	cli := gofeas.NewAPIClient(configuration)
-	res, httpRes, err := cli.GrafeasV1Beta1Api.CreateOccurrence(context.Background(), "projects/image-signing", occurrence)
+	res, httpRes, err := cli.CreateOccurrence(context.Background(), "projects/image-signing", occurrence)
 
 	if httpRes != nil && httpRes.StatusCode != http.StatusOK {
 		fmt.Println("status code: ", httpRes.Status)

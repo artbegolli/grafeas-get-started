@@ -59,6 +59,15 @@ curl -X POST \
   -d @resources/occurrence.json
 ```
 
+### Deleting an Occurrence 
+
+You can delete a specific occurrence as follows
+
+```
+curl -X DELETE \
+  'http://127.0.0.1:8080/v1beta1/projects/image-signing/occurrences/<OCCURRENCE_ID>'
+```
+
 ### Pushing an Occurrence using the [Grafeas Client API](https://github.com/grafeas/client-go/tree/master/0.1.0)
 
 You can push images to Grafeas from go using the Grafeas Go client API.
@@ -70,4 +79,3 @@ go get github.com/ocibuilder/gofeas
 ```
 
 An example of pushing an occurrence using the client can be found in the [examples](https://github.com/artbegolli/grafeas-get-started/tree/master/examples)
-

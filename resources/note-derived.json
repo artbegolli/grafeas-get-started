@@ -1,0 +1,10 @@
+{
+  "name": "projects/demo/notes/image",
+  "shortDescription": "Derived image metadata note.",
+  "longDescription": "Dervied image metadata note.",
+  "attestationAuthority": {
+    "hint": {
+      "humanReadableName": "derived"
+    }
+  }
+}

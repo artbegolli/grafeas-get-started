@@ -1,0 +1,10 @@
+{
+  "name": "projects/demo/notes/build",
+  "shortDescription": "Image build metadata note.",
+  "longDescription": "Image build metadata note.",
+  "attestationAuthority": {
+    "hint": {
+      "humanReadableName": "builder"
+    }
+  }
+}

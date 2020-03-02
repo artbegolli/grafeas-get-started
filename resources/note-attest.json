@@ -1,0 +1,10 @@
+{
+  "name": "projects/demo/notes/sign",
+  "shortDescription": "Production image signer.",
+  "longDescription": "Production image signer.",
+  "attestationAuthority": {
+    "hint": {
+      "humanReadableName": "signer"
+    }
+  }
+}
